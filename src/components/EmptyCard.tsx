@@ -2,6 +2,10 @@ import { FC } from 'react';
 import { Card, Placeholder } from 'react-bootstrap';
 import { styled } from 'styled-components';
 
+const EmptyCardContainer = styled(Card)`
+    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4)
+`;
+
 const EmptyImg = styled(Card)`
     background-color: #35343c;
     min-height: 286px;
@@ -12,7 +16,7 @@ const EmptyImg = styled(Card)`
 
 const EmptyCard:FC = () => {
     return (
-        <Card style={{ width: '18rem' }}>
+        <EmptyCardContainer style={{ width: '18rem' }}>
             <EmptyImg />
             <Card.Body>
                 <Placeholder as={Card.Title} animation="wave">
@@ -40,7 +44,7 @@ const EmptyCard:FC = () => {
                     <i className={`bi bi-globe`} />
                 </Placeholder.Button>
             </Card.Body>
-        </Card>
+        </EmptyCardContainer>
     );
 };
 

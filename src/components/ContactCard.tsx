@@ -7,7 +7,11 @@ import Icon from './Icon';
 const ContactCardContainer = styled(Card)`
     margin-top: 100px;
     margin-bottom: 50px;
-    padding: 10%;
+    padding: 5%;
+    border: none;
+    color: white;
+    background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );
+    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4);
 `;
 
 const Title = styled(Card.Title)`
@@ -19,23 +23,51 @@ const CustomText = styled.p`
     font-size: 1.2rem;
 `;
 
+const CustomIcon = styled.i`
+    font-size: 1.5rem;
+    margin-right: 5px;
+`;
+
+interface ContactInfoProps {
+    icon: string;
+    title: string;
+}
+
+const ContactInformation: FC<ContactInfoProps> = ({ icon, title }) => (
+    <Col xs={12}>
+        <CustomText>
+            <CustomIcon className={`bi ${icon}`} />{ " " }
+            { title }
+        </CustomText>
+    </Col>
+);
+
 const ContactCard: FC = () => {
 
-    const icons = [
+    const contactInformation = [
+        { icon: "bi-whatsapp", title: "(+506) 5713-0084" },
+        { icon: "bi-envelope", title: "s.varggas@gmail.com" },
+        { icon: "bi-geo", title: "Costa Rica" },
+    ];
+
+    const horizontalIcons = [
         { 
             name: "LinkedIn", 
             icon: "bi-linkedin", 
-            href: "https://www.linkedin.com/in/svarggas/" 
+            href: "https://www.linkedin.com/in/svarggas/",
+            variant: "outline-light",
         },
         { 
             name: "GitHub", 
             icon: "bi-github", 
-            href: "https://github.com/svarggas" 
+            href: "https://github.com/svarggas",
+            variant: "outline-light",
         },
         { 
             name: "CV", 
             icon: "bi-file-earmark-person", 
             href: "#",
+            variant: "outline-light",
         },
     ];
 
@@ -53,29 +85,18 @@ const ContactCard: FC = () => {
                             </CustomText>
                         </Card.Text>
                     </Col>
-                    <Col xs={12}>
-                        <CustomText>
-                            <i className='bi bi-whatsapp' />{ " " }
-                            (+506) 5713-0084
-                        </CustomText>
-                    </Col>
-                    <Col xs={12}>
-                        <CustomText>
-                            <i className='bi bi-envelope' />{ " " }
-                            s.varggas@gmail.com
-                        </CustomText>
-                    </Col>
-                    <Col xs={12}>
-                        <CustomText>
-                            <i className='bi bi-geo' />{ " " }
-                            Costa Rica
-                        </CustomText>
-                    </Col>
+                    {
+                        contactInformation.map((info, index) => (
+                            <ContactInformation key={index} {...info} />
+                        ))
+                    }
                     <Col xs={12}>
                         <CustomText>
                             {
-                                icons.map((icon, index) => (
-                                    <Icon key={index} {...icon} />
+                                horizontalIcons.map((icon, index) => (
+                                    <span key={index} className='mx-2'>
+                                        <Icon  {...icon} />
+                                    </span>
                                 ))
                             }
                         </CustomText>

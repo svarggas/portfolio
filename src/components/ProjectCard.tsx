@@ -5,6 +5,10 @@ import EmptyCard from './EmptyCard';
 import Icon from './Icon';
 import { styled } from 'styled-components';
 
+const CardContainer = styled(Card)`
+    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4)
+`;
+
 const SizingContainer = styled.div`
     display: flex;
     justify-content: space-around;
@@ -32,7 +36,7 @@ const ProjectCard:FC<ProjectCardProps> = ({ imageSrc, title, description, github
 
     return (
         <SizingContainer>
-            <Card style={{ width: '18rem' }}>
+            <CardContainer style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={imageSrc} />
                 <Card.Body>
                     <Card.Title> { title } </Card.Title>
@@ -50,7 +54,7 @@ const ProjectCard:FC<ProjectCardProps> = ({ imageSrc, title, description, github
                         href={demo}
                     />
                 </Card.Body>
-            </Card>
+            </CardContainer>
         </SizingContainer>
     )
 };
