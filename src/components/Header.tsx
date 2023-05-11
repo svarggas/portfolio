@@ -25,6 +25,7 @@ const Header:FC = () => {
                             <Nav.Link onClick={() => scrollFunction('profile')}>Profile</Nav.Link>
                             <Nav.Link onClick={() => scrollFunction('projects')}>Projects</Nav.Link>
                             <Nav.Link onClick={() => scrollFunction('contactMe')}>Contact Me</Nav.Link>
+                            <Nav.Link onClick={() => scrollFunction('contactInformation')}>Contact Information</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
