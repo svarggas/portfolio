@@ -13,9 +13,10 @@ interface IconProps {
     name: string;
     icon: string;
     href: string;
+    variant?: string;
 }
 
-const Icon:FC<IconProps> = ({ name, icon, href }) => {
+const Icon:FC<IconProps> = ({ name, icon, href, variant = "dark" }) => {
 
     const getTooltip = () => (
         <Tooltip id={name}>
@@ -43,7 +44,7 @@ const Icon:FC<IconProps> = ({ name, icon, href }) => {
                 overlay={getTooltip()}
             >
                 <Button
-                    variant='dark'
+                    variant={variant}
                     onClick={() => goTo()}
                 >
                     <i className={`bi ${icon}`} />
