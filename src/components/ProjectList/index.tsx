@@ -10,7 +10,7 @@ const ProjectListContainer = styled(Row)`
 `;
 
 const Title = styled.h2`
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 `;
 
 const ProjectList: FC = () => (
