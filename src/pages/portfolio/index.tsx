@@ -5,7 +5,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Profile from '../../components/Profile';
 import ProjectList from '../../components/ProjectList';
-import Contact from '../../components/Contact';
+import ContactForm from '../../components/ContactForm';
+import ContactCard from '../../components/ContactCard';
 
 const MainContainer = styled.div`
     max-width: 60%;
@@ -19,7 +20,8 @@ const Portfolio:FC = () => {
             <MainContainer>
                 <Profile />
                 <ProjectList />
-                <Contact />
+                <ContactForm />
+                <ContactCard />
             </MainContainer>
             <Footer />
         </>
