@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { styled } from 'styled-components';
 
 import ProfileImage from './ProfileImage';
 import Icon from './Icon';
-import { styled } from 'styled-components';
 
 const ProfileContainer = styled(Row)`
     margin-top: 100px;
@@ -30,7 +30,7 @@ const Profile:FC = () => {
     ];
 
     return (
-        <ProfileContainer>
+        <ProfileContainer id="profile">
             <Col className="d-flex justify-content-center">
                 <ProfileImage />
             </Col>
@@ -48,7 +48,6 @@ const Profile:FC = () => {
                                 <Icon key={index}  {...icon} />
                             ))
                         }
-                        
                     </Col>
                 </Row>
             </Col>

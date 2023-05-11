@@ -14,7 +14,7 @@ const Title = styled.h2`
 `;
 
 const ProjectList: FC = () => (
-    <ProjectListContainer>
+    <ProjectListContainer id="projects">
         <Col>
             <Title>
                 Projects {" "}

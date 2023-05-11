@@ -1,10 +1,11 @@
 import { FC } from 'react';
 
-const Profile:FC = () => {
-
+const Contact:FC = () => {
     return (
-        <></>
+        <div id="contactMe">
+            Contact
+        </div>
     )
 };
 
-export default Profile;
+export default Contact;
