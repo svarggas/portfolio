@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { styled } from 'styled-components';
 
 const NavbarContainer = styled(Container)`
@@ -15,20 +15,18 @@ const Header:FC = () => {
     }
       
     return (
-        <Navbar bg="light" className="mb-3">
+        <Navbar collapseOnSelect expand="sm" bg="light">
             <NavbarContainer fluid>
-                <Navbar.Brand> { "<" } Sebastian Vargas R. { ">" } </Navbar.Brand>
-                <Navbar.Toggle />
-                <Navbar.Offcanvas placement="end">
-                    <Offcanvas.Body>
-                        <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Nav.Link onClick={() => scrollFunction('profile')}>Profile</Nav.Link>
-                            <Nav.Link onClick={() => scrollFunction('projects')}>Projects</Nav.Link>
-                            <Nav.Link onClick={() => scrollFunction('contactMe')}>Contact Me</Nav.Link>
-                            <Nav.Link onClick={() => scrollFunction('contactInformation')}>Contact Information</Nav.Link>
-                        </Nav>
-                    </Offcanvas.Body>
-                </Navbar.Offcanvas>
+                <Navbar.Brand> { "<" }Sebastian V.{ ">" } </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto justify-content-end flex-grow-1 pe-3">
+                        <Nav.Link onClick={() => scrollFunction('profile')}>Profile</Nav.Link>
+                        <Nav.Link onClick={() => scrollFunction('projects')}>Projects</Nav.Link>
+                        <Nav.Link onClick={() => scrollFunction('contactMe')}>Contact Me</Nav.Link>
+                        <Nav.Link onClick={() => scrollFunction('contactInformation')}>Contact Information</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
             </NavbarContainer>
         </Navbar>
     )
