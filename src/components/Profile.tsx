@@ -37,17 +37,19 @@ const Profile:FC = () => {
             <Col>
                 <Row>
                     <Col>
-                        <h1>Sebastian Vargas R.</h1>
+                        <h1>Sebastian Vargas</h1>
                         <p>
                             Howdy! <br/>
                             I'm Sebastian, welcome to my portfolio. If anything here catch your eye, don't hesitate and get in contact. <br/>
                             It would be a pleasure to get to know you.
                         </p>
-                        {
-                            icons.map((icon, index) => (
-                                <Icon key={index}  {...icon} />
-                            ))
-                        }
+                        <span className='d-flex justify-content-center'>
+                            {
+                                icons.map((icon, index) => (
+                                    <Icon key={index}  {...icon} />
+                                ))
+                            }
+                        </span>
                     </Col>
                 </Row>
             </Col>
