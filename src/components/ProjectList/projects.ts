@@ -1,4 +1,8 @@
-import img from '../../images/bruce-mars.jpg'
+import gameConcentration from '../../images/projects/gameConcentration.png';
+import recipeApp from '../../images/projects/recipeApp.png';
+import personalGalery from '../../images/projects/personalGalery.png';
+import youtubeClone from '../../images/projects/youtubeClone.png';
+import gaia from '../../images/projects/gaia.png';
 
 const emptyProject = {
     empty: true,
@@ -13,7 +17,7 @@ const emptyProject = {
 export default [
     {
         name: "gameConcentration",
-        imageSrc: img,
+        imageSrc: gameConcentration,
         title: "Game of Concentration",
         description: "Project created as an interview challenge, to review functionality. Memory game for 2 players.",
         demo: "https://concentration-memory-game.netlify.app",
@@ -21,7 +25,7 @@ export default [
     },
     {
         name: "recipeApp",
-        imageSrc: img,
+        imageSrc: recipeApp,
         title: "Recipe App",
         description: "React app where you can find recipies based on your search. Powered by Edaman API.",
         demo: "https://edaman-recipe-app.netlify.app",
@@ -29,7 +33,7 @@ export default [
     },
     {
         name: "personalGalery",
-        imageSrc: img,
+        imageSrc: personalGalery,
         title: "Personal Galery",
         description: "Upload your favorite pictures and display them as a grid. Powered by IMGUR API.",
         demo: "https://imgur-galery.netlify.app",
@@ -37,7 +41,7 @@ export default [
     },
     {
         name: "youtubeVideoSearch",
-        imageSrc: img,
+        imageSrc: youtubeClone,
         title: "Youtube Video Search",
         description: "Example of a video search application. Powered by Youtube API.",
         demo: "https://vue-youtube-clone.netlify.app",
@@ -45,7 +49,7 @@ export default [
     },
     {
         name: "gaia",
-        imageSrc: img,
+        imageSrc: gaia,
         title: "Canada's Best Atracttions",
         description: "Cool paralax landing page highliting some of Canada's best attactions.",
         demo: "https://gaia-canada.netlify.app",
