@@ -14,10 +14,20 @@ const MainContainer = styled.div`
 `;
 
 const Portfolio:FC = () => {
+
+    const x = import.meta.env.VITE_email_service.toString();
+    const y = import.meta.env.VITE_email_template.toString();
+    const z = import.meta.env.VITE_email_public_key.toString();
+
     return (
         <>
             <Header />
             <MainContainer>
+                <>
+                    {x}<br/>
+                    {y}<br/>
+                    {z}<br/>
+                </>
                 <Profile />
                 <ProjectList />
                 <ContactForm />
