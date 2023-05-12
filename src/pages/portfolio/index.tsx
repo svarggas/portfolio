@@ -13,29 +13,17 @@ const MainContainer = styled.div`
     margin: auto;
 `;
 
-const Portfolio:FC = () => {
-
-    const x = import.meta.env.VITE_email_service.toString();
-    const y = import.meta.env.VITE_email_template.toString();
-    const z = import.meta.env.VITE_email_public_key.toString();
-
-    return (
-        <>
-            <Header />
-            <MainContainer>
-                <>
-                    {x}<br/>
-                    {y}<br/>
-                    {z}<br/>
-                </>
-                <Profile />
-                <ProjectList />
-                <ContactForm />
-                <ContactCard />
-            </MainContainer>
-            <Footer />
-        </>
-    )
-};
+const Portfolio:FC = () => (
+    <>
+        <Header />
+        <MainContainer>
+            <Profile />
+            <ProjectList />
+            <ContactForm />
+            <ContactCard />
+        </MainContainer>
+        <Footer />
+    </>
+);
 
 export default Portfolio;
