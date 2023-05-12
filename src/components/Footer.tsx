@@ -14,7 +14,7 @@ const Footer:FC = () => {
                 <Navbar.Offcanvas placement="end">
                     <Offcanvas.Body>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Navbar.Brand> { "<" } Sebastian Vargas R. { " />" } </Navbar.Brand>
+                            <Navbar.Brand> { "</" } Sebastian V. { " >" } </Navbar.Brand>
                         </Nav>
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
