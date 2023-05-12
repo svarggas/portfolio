@@ -14,10 +14,6 @@ const ContactCardContainer = styled(Card)`
     box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4);
 `;
 
-const Title = styled(Card.Title)`
-    margin-bottom: 15px;
-`;
-
 const CustomText = styled.p`
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -76,14 +72,10 @@ const ContactCard: FC = () => {
             <Card.Body>
                 <Row>
                     <Col xs={12}>
-                        <Title>
-                            <h2>Contact Information</h2> 
-                        </Title>
-                        <Card.Text>
-                            <CustomText>
-                                You can contact me through the form above, or with some of the options below. I will reach to it as soon as possible.
-                            </CustomText>
-                        </Card.Text>
+                        <h2>Contact Information</h2> 
+                        <CustomText>
+                            You can contact me through the form above, or with some of the options below. I will reach to it as soon as possible.
+                        </CustomText>
                     </Col>
                     {
                         contactInformation.map((info, index) => (
@@ -95,7 +87,7 @@ const ContactCard: FC = () => {
                             {
                                 horizontalIcons.map((icon, index) => (
                                     <span key={index} className='mx-2'>
-                                        <Icon  {...icon} />
+                                        <Icon {...icon} />
                                     </span>
                                 ))
                             }
