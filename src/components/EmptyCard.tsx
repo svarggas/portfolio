@@ -31,6 +31,7 @@ const EmptyCard:FC = () => {
                 </Placeholder>
                 <Placeholder.Button 
                     variant="dark" 
+                    md={3}
                     sm={2} 
                     className="m-1"    
                 >
@@ -38,6 +39,7 @@ const EmptyCard:FC = () => {
                 </Placeholder.Button>
                 <Placeholder.Button 
                     variant="dark" 
+                    md={3}
                     sm={2} 
                     className="m-1"    
                 >
