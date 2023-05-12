@@ -16,11 +16,21 @@ const ContactCardContainer = styled(Card)`
 
 const CustomText = styled.p`
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    @media (min-width: 480px) {
+        font-size: 1rem;
+    }
+    @media (min-width: 768px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const CustomIcon = styled.i`
-    font-size: 1.5rem;
+    @media (min-width: 480px) {
+        font-size: 1.2rem;
+    }
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
     margin-right: 5px;
 `;
 
@@ -86,7 +96,7 @@ const ContactCard: FC = () => {
                         <CustomText>
                             {
                                 horizontalIcons.map((icon, index) => (
-                                    <span key={index} className='mx-2'>
+                                    <span key={index} >
                                         <Icon {...icon} />
                                     </span>
                                 ))
