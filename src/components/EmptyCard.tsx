@@ -3,12 +3,12 @@ import { Card, Placeholder } from 'react-bootstrap';
 import { styled } from 'styled-components';
 
 const EmptyCardContainer = styled(Card)`
-    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4)
+    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4);
 `;
 
 const EmptyImg = styled(Card)`
     background-color: #35343c;
-    min-height: 286px;
+    min-height: 262px;
     width: auto;
     border: none;
     border-radius: 0;
@@ -16,7 +16,7 @@ const EmptyImg = styled(Card)`
 
 const EmptyCard:FC = () => {
     return (
-        <EmptyCardContainer style={{ width: '18rem' }}>
+        <EmptyCardContainer style={{ width: '30rem' }}>
             <EmptyImg />
             <Card.Body>
                 <Placeholder as={Card.Title} animation="wave">

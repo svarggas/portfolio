@@ -6,13 +6,29 @@ import Icon from './Icon';
 import { styled } from 'styled-components';
 
 const CardContainer = styled(Card)`
-    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4)
+    box-shadow: 0 25px 35px 0 rgba(0,0,0,0.4);
+`;
+
+const CardBody = styled(Card.Body)`
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    min-height: 180px;
 `;
 
 const SizingContainer = styled.div`
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
+`;
+
+const CardImage = styled(Card.Img)`
+    width: 100%;
+    height: auto;
+    @media (min-width: 480px) {
+        min-height: 280px;
+        max-height: 280px;
+    }
 `;
 
 interface ProjectCardProps {
@@ -36,9 +52,9 @@ const ProjectCard:FC<ProjectCardProps> = ({ imageSrc, title, description, github
 
     return (
         <SizingContainer>
-            <CardContainer style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={imageSrc} />
-                <Card.Body>
+            <CardContainer style={{ width: '30rem' }}>
+                <CardImage variant="top" src={imageSrc} />
+                <CardBody>
                     <Card.Title> { title } </Card.Title>
                     <Card.Text>
                         { description }
@@ -53,7 +69,7 @@ const ProjectCard:FC<ProjectCardProps> = ({ imageSrc, title, description, github
                         icon='bi-globe'
                         href={demo}
                     />
-                </Card.Body>
+                </CardBody>
             </CardContainer>
         </SizingContainer>
     )
