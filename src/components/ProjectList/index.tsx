@@ -35,7 +35,12 @@ const ProjectList: FC = () => (
             <Row>
                 {
                     projects.map((project, index) => (
-                        <Col key={index} xs={{ span: 4 }}>
+                        <Col 
+                            key={index}
+                            lg={4}
+                            md={6}
+                            sm={12}
+                        >
                             <ProjectCard {...project} />
                         </Col>
                     ))

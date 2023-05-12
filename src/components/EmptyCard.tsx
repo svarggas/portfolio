@@ -31,14 +31,14 @@ const EmptyCard:FC = () => {
                 </Placeholder>
                 <Placeholder.Button 
                     variant="dark" 
-                    xs={2} 
+                    sm={2} 
                     className="m-1"    
                 >
                     <i className={`bi bi-github`} />
                 </Placeholder.Button>
                 <Placeholder.Button 
                     variant="dark" 
-                    xs={2} 
+                    sm={2} 
                     className="m-1"    
                 >
                     <i className={`bi bi-globe`} />
