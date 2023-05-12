@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { Card } from 'react-bootstrap';
 import { styled } from 'styled-components';
 
-import ProfilePic from '../images/bruce-mars.jpg';
+import ProfilePic from '../images/profile/profile.png';
 
 const ImgCard = styled(Card)`
-    max-width: 200px;
+    max-width: 250px;
     margin: 10px;
     border: none;
 `;

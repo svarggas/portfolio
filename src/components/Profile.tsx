@@ -34,7 +34,7 @@ const Profile:FC = () => {
             <Col className="d-flex justify-content-center">
                 <ProfileImage />
             </Col>
-            <Col>
+            <Col  className='d-flex align-items-center'>
                 <Row>
                     <Col>
                         <h1>Sebastian Vargas</h1>
