@@ -3,7 +3,9 @@ import recipeApp from '../../images/projects/recipeApp.png';
 import personalGalery from '../../images/projects/personalGalery.png';
 import youtubeClone from '../../images/projects/youtubeClone.png';
 import gaia from '../../images/projects/gaia.png';
+import blog from '../../images/projects/blog.png';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const emptyProject = {
     empty: true,
     name: "",
@@ -15,6 +17,14 @@ const emptyProject = {
 };
 
 export default [
+    {
+        name: "CMS Blog",
+        imageSrc: blog,
+        title: "CMS Blog",
+        description: "Blog managed by Contentful CMS and developed with NextJS as a starter project.",
+        demo: "https://cms-blog-next.netlify.app/",
+        github: "https://github.com/svarggas/cms-blog",
+    },
     {
         name: "gameConcentration",
         imageSrc: gameConcentration,
@@ -54,6 +64,5 @@ export default [
         description: "Cool paralax landing page highliting some of Canada's best attactions.",
         demo: "https://gaia-canada.netlify.app",
         github: "https://github.com/svarggas/Gaia-FrontEnd",
-    },
-    emptyProject
+    }
 ];
