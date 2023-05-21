@@ -7,7 +7,8 @@
     "start": "yarn run build && yarn run preview",
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "yarn eslint ./src/**/* --ext .ts --ext .tsx --no-error-on-unmatched-pattern",
+    "lint:fix": "yarn lint --fix",
     "preview": "vite preview"
   },
   "dependencies": {
